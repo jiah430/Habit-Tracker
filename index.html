@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Gamified Habit Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>🎯 LevelUp Daily Habit Tracker</h1>
+        
+        <!-- Scoreboard Panel -->
+        <div class="stats-panel">
+            <h3>Score: <span id="score-text">0</span> Points</h3>
+            <h3>Streak: 🔥 <span id="streak-text">0</span> Days</h3>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <!-- SECTION 1: ADD CUSTOM GOALS -->
+        <div class="card">
+            <h2>📝 Add a New Goal</h2>
+            <input type="text" id="goal-input-box" placeholder="Type your goal here...">
+            <button onclick="addGoalToList()">Add to List</button>
+            
+            <ul id="my-goals-list"></ul>
+        </div>
+
+        <!-- SECTION 2: THE REWARD SHOP (No files, just spending points!) -->
+        <div class="card">
+            <h2>🛒 The Reward Shop</h2>
+            <p>Spend your hard-earned points to unlock guilty pleasures!</p>
+            
+            <div class="shop-item">
+                <span>📺 Watch 1 Netflix Episode (Costs 30 Points)</span>
+                <button class="buy-btn" onclick="buyReward(30, 'Netflix Episode')">Buy</button>
+            </div>
+
+            <div class="shop-item">
+                <span>🎮 Play Video Games for 30 Mins (Costs 50 Points)</span>
+                <button class="buy-btn" onclick="buyReward(50, 'Gaming Time')">Buy</button>
+            </div>
+
+            <div class="shop-item">
+                <span>🍦 Eat a Snack Treat (Costs 20 Points)</span>
+                <button class="buy-btn" onclick="buyReward(20, 'Snack Treat')">Buy</button>
+            </div>
+        </div>
+
+    </main>
+
+    <script src="demo.js"></script>
+</body>
+</html>
